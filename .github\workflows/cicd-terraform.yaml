@@ -12,6 +12,14 @@ jobs:
       checks: write        # Required to add status summary.
       contents: read       # Required to checkout repository.
       pull-requests: write # Required to add comment and label.
+      id-token: write
+      issues: write
+
+      env:
+        ARM_USE_OIDC: true
+        ARM_CLIENT_ID: 61a9cd5a-2e68-4a57-bcd6-2944fc6383b6
+        ARM_SUBSCRIPTION_ID: 382b6330-6cf0-4e15-b202-543c02240501
+        ARM_TENANT_ID: 153f1179-3606-40e1-8c1b-e328b9987f3e
 
     steps:
       - uses: actions/checkout@v4
